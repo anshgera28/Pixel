@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
 import FloatingShapes from "@/components/floating-shape";
+import Header from "@/components/header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,7 +25,7 @@ export default function RootLayout({ children }) {
             enableSystem
             disableTransitionOnChange
           >
-
+            <Header />
             <main className="bg-slate-900 min-h-screen text-white overflow-x-hidden" >
               <FloatingShapes />
               <Toaster richColors />
